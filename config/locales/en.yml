@@ -1,0 +1,6 @@
+en:
+  interactive_text:
+    :0: Hey^80.^80.^80.^600looks like you're new here! ^500Want a <strong>quick overview</strong> of what we do?::Sure!:1,No Thanks:x
+    :1: Great!|We are a <strong>web</strong> and <strong>mobile</strong> agency.|Are you more of a web or mobile kind of person?::Web:2,Mobile:3
+    :2: Us too...^100|We like <strong>Ruby on Rails</strong> and <strong>React</strong> but aren't too picky.|Check out <a href="https://www.bungalowinsurance.com/" target="_blank">Bungalow</a> or <a href="https://www.trustbooks.com" target="_blank">TrustBooks</a> to see our work in action!::Dismiss:x,Start Over:1
+    :3: Us too...^400|We like <strong>Native iOS and Android</strong> but dabble in <strong>React Native</strong>.|Check out <a href="https://get.quickkeyapp.com/" target="_blank">Quick Key</a> to see our apps in action!::Dismiss:x,Start Over:1

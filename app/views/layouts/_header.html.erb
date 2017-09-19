@@ -1,0 +1,28 @@
+<header class="application-header fixed show <%= 'home-header' if action_name == 'home' %>" data-application-header>
+  <a class="application-nav-logo" aria-label="Lockstep Home" href="/">
+    <!-- Logo for desktop version -->
+    <div class="logo-ralph-and-wordmark"></div>
+
+    <!-- Logo for mobile version -->
+    <div class="logo-ralph-only"></div>
+  </a>
+  <a class="application-nav-mobile-icon" data-application-nav-mobile-icon="true" href="/">&#9776;
+  </a>
+  <a class="application-nav-hire-us-cta" href="#contact-us">Contact Us</a>
+  <nav class='application-nav'>
+    <ul>
+      <li class='application-nav-item'>
+        <a class="application-nav-link application-nav-home" data-application-nav-link="true" href="/">Home</a>
+      </li>
+      <li class='application-nav-item'>
+        <a class="application-nav-link application-nav-services" data-application-nav-link="true" href="/services">Services &amp; Technology</a>
+      </li>
+      <li class='application-nav-item'>
+        <a class="application-nav-link application-nav-work" data-application-nav-link="true" href="/work">Our Work</a>
+      </li>
+      <li class='application-nav-item'>
+        <a class="application-nav-link application-nav-hire-us" data-application-nav-link="true" href="<%= contact_path %>">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+</header>

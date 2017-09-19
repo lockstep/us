@@ -1,0 +1,29 @@
+$red: #F05554;
+
+html, body {
+  height: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.relative-position {
+  position: relative;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-red {
+  color: $red;
+}

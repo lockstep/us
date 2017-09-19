@@ -1,0 +1,35 @@
+dependencies:
+  post:
+    - bundle exec bundle-audit check --update
+
+checkout:
+  post:
+    - cp config/application.yml.example config/application.yml
+
+deployment:
+  staging:
+    branch: development
+    commands:
+      # Required to fix this error on CircleCI:
+      #
+      # "Push rejected, source repository is a shallow clone.
+      # Unshallow it with `git fetch --all --unshallow` and try pushing again."
+      - '[[ ! -s "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow'
+      - git push git@heroku.com:lockstep-staging-temp.git HEAD:master:
+          timeout: 300
+      - heroku run rake db:migrate --app lockstep-staging-temp:
+          timeout: 300
+      - heroku restart --app lockstep-staging-temp
+  production:
+    branch: master
+    commands:
+      # Required to fix this error on CircleCI:
+      #
+      # "Push rejected, source repository is a shallow clone.
+      # Unshallow it with `git fetch --all --unshallow` and try pushing again."
+      - '[[ ! -s "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow'
+      - git push git@heroku.com:lockstep.git HEAD:master:
+          timeout: 300
+      - heroku run rake db:migrate --app lockstep:
+          timeout: 300
+      - heroku restart --app lockstep

@@ -1,0 +1,87 @@
+.case-studies {
+  background: linear-gradient($blue, $green);
+  color: white;
+  text-shadow: 2px 2px #959595;
+}
+
+ul.tech-stack {
+  li {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 7px 6px 0 0;
+    font-weight: 500;
+    color: white;
+    font-size: 13px;
+  }
+}
+
+.ruby-on-rails {
+  background-color: #c22b2b;
+}
+
+.grape-api {
+  background-color: #501f77;
+}
+
+.postgresql {
+  background-color: #316192;
+}
+
+.angularjs {
+  background-color: #e62a39;
+}
+
+.jquery {
+  background-color: #146bb2;
+}
+
+.html5 {
+  background-color: #e44d26;
+}
+
+.css3 {
+  background-color: #33a9dc;
+}
+
+.fa-angularjs {
+  background: image-url('angular-icon.png');
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin-bottom: -3px;
+  position: relative;
+  top: 2px;
+}
+
+.fa-jquery {
+  background: image-url('jquery-icon.png');
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin-bottom: -3px;
+  position: relative;
+  top: 2px;
+}
+
+.project-image {
+  height: 480px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.separator-line {
+  background: white;
+  height: 2px;
+  background: radial-gradient(closest-side at 50% 50%, $blue, $green, white);
+}
+
+@include media-breakpoint-down(sm) {
+  .case-studies-title {
+    padding: 1rem;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Lockstep Labs delivers the highest quality SaaS, Web and mobile apps for a fraction of the usual cost. Offices in Bangkok, Thailand and Boulder, Colorado">
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Facebook OpenGraph meta-->
+    <meta property='og:title' content="Lockstep Labs" />
+    <meta property='og:type' content="website" />
+    <meta property='og:image' content="<%= image_url('lockstep_press_small.jpg') %>" />
+    <meta property='og:image:alt' content="Lockstep Labs" />
+    <meta property='og:url' content="<%= root_url %>" />
+    <meta property='og:description' content="Lockstep Labs delivers the highest quality SaaS, Web and mobile apps for a fraction of the usual cost. Offices in Bangkok, Thailand and Boulder, Colorado" />
+
+    <%= csrf_meta_tags %>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= render partial: 'layouts/favicon' %>
+    <link rel='manifest' href='manifest.json'>
+    <title><%= yield(:page_title) %></title>
+  </head>
+  <body class='pages pages-show <%= body_class(action_name) %>'>
+    <%= render partial: 'layouts/header' %>
+    <%= yield %>
+    <%= render partial: 'layouts/footer' %>
+    <%= render partial: 'layouts/google_analytics' %>
+    <%= javascript_include_tag 'work' %>
+  </body>
+</html>

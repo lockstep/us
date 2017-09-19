@@ -1,0 +1,10 @@
+<% if flash.present? %>
+  <% flash.each do |name, message| %>
+    <div class="alert alert-<%= flash_alert_class(name) %> alert-dismissible fade show" role="alert">
+      <a class="close" data-dismiss="alert" aria-label="Close" style="cursor: pointer; border: none;">
+        <span aria-hidden="true">&times;</span>
+      </a>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>

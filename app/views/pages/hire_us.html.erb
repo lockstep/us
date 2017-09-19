@@ -1,0 +1,44 @@
+<% content_for :page_title, 'Lockstep Labs | Custom Software Development Company - Your Project' %>
+<main class="application-main-content">
+  <div class="split-layout">
+    <div class="split-layout-secondary photo-grid photo-grid--contact split-layout-secondary--fixed">
+      <div class="photo-grid__photo"></div>
+      <div class="photo-grid__photo"></div>
+      <div class="photo-grid__photo"></div>
+      <div class="photo-grid__photo"></div>
+      <div class="photo-grid__photo"></div>
+      <div class="photo-grid__photo"></div>
+    </div>
+    <div class="split-layout-primary">
+      <div class="split-primary-wrapper">
+        <section>
+          <%= render partial: 'layouts/flash' %>
+          <h1 class="text-green">Tell us about your project</h1>
+          <%= form_tag(opportunities_path, method: "post", class: "hire-us-form mt-5") do %>
+            <div class="form-group">
+              <label for="project_name">WHAT IS YOUR COMPANY OR PROJECT NAME?</label>
+              <input type="text" class="form-control" id="project_name" name="project_name">
+            </div>
+            <div class="form-group">
+              <label for="customer_name">WHAT IS YOUR NAME?</label>
+              <input type="text" class="form-control" id="customer_name" name="customer_name" required="required">
+            </div>
+            <div class="form-group">
+              <label for="email">WHAT IS YOUR EMAIL ADDRESS?*</label>
+              <input type="email" class="form-control" id="email" name="email" required="required">
+            </div>
+            <div class="form-group">
+              <label for="phone_number">WHAT IS YOUR PHONE NUMBER?</label>
+              <input type="text" class="form-control" id="phone_number" name="phone_number">
+            </div>
+            <div class="form-group">
+              <label for="description">WHAT CAN LOCKSTEP DO FOR YOU?</label>
+              <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          <% end %>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
