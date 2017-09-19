@@ -1,34 +1,3 @@
-function drags(e, t, n) {
-    e.on("mousedown touchstart", function(i) {
-        e.addClass("draggable"), t.addClass("resizable");
-        var r = i.pageX ? i.pageX : i.originalEvent.touches[0].pageX,
-            a = e.outerWidth(),
-            o = e.offset().left + a - r,
-            s = n.offset().left,
-            l = n.outerWidth();
-        minLeft = s + 10, maxLeft = s + l - a - 10, e.parents().on("mousemove touchmove", function(e) {
-            var n = e.pageX ? e.pageX : e.originalEvent.touches[0].pageX;
-            leftValue = n + o - a, leftValue < minLeft ? leftValue = minLeft : leftValue > maxLeft && (leftValue = maxLeft), widthValue = 100 * (leftValue + a / 2 - s) / l + "%", $(".draggable").css("left", widthValue).on("mouseup touchend touchcancel", function() {
-                $(this).removeClass("draggable"), t.removeClass("resizable")
-            }), $(".resizable").css("width", widthValue)
-        }).on("mouseup touchend touchcancel", function() {
-            e.removeClass("draggable"), t.removeClass("resizable")
-        }), i.preventDefault()
-    }).on("mouseup touchend touchcancel", function() {
-        e.removeClass("draggable"), t.removeClass("resizable")
-    })
-}
-
-function DatePicker() {
-    $("input[name=date]").datepicker({
-        dateFormat: "dd/mm/yy",
-        minDate: new Date,
-        beforeShowDay: function(e) {
-            return [5 == e.getDay()]
-        }
-    })
-}
-
 function scrollForFixedColumn() {
     var e = $(".application-footer");
     if (e.length > 0) {
@@ -40,46 +9,11 @@ function scrollForFixedColumn() {
             a = "split-layout-secondary--fixed";
         r.css("max-height", i), $(window).on("scroll", function() {
             var e = $(window).scrollTop();
-            n + e - t + 200 >= 0 ? r.removeClass(a) : r.addClass(a)
+            total = n + e - t - 170 + 169
+            total >= 0 ? r.removeClass(a) : r.addClass(a)
         })
       }
     }
-}
-
-function TeamiOSGrid() {
-    function e() {
-        $(".bio div").hide(), t.random().addClass(n);
-        var e = $("a.selected").attr("id");
-        $(".bio #" + e).show()
-    }
-    var t = $(".mugshot a"),
-        n = "selected";
-    t.click(function(e) {
-        e.preventDefault(), $("a.selected").removeClass(n), $(this).addClass(n);
-        var t = $("a.selected").attr("id");
-        $(".bio div:visible").fadeOut(200, function() {
-            $(".bio #" + t).fadeIn(200)
-        })
-    }), e(), $(".mugshot").shuffle()
-}
-
-function LondonSiteNav() {
-    var e = $("body"),
-        t = $("[data-application-nav-mobile-icon]"),
-        n = $("[data-application-nav-link]");
-    t.click(function() {
-        e.toggleClass("fixed")
-    }), n.click(function() {
-        e.removeClass("fixed")
-    })
-}
-
-function getOffsetX(e, t, n) {
-    return e.position().left + t - n.outerWidth() / 2
-}
-
-function getOffsetY(e, t, n) {
-    return e.position().top + t - n.height() - 60
 }
 
 window.App = {},

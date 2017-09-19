@@ -2254,9 +2254,9 @@ body.home {
 
 @media screen and (min-width: 890px) {
   .show-tile .split-layout-secondary {
-    //background-image: -webkit-gradient(linear, left top, left bottom, from(#008eb0), to(#5ca6cc));
-    //background-image: linear-gradient(#008eb0, #5ca6cc);
-    background-color: transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#008eb0), to(#5ca6cc));
+    background-image: linear-gradient(#008eb0, #5ca6cc);
+    //background-color: transparent;
   }
 }
 
@@ -3485,7 +3485,7 @@ body.home {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: image-url('trustbook_banner.jpg');
+  background-image: image-url('trustbook_banner2.jpg');
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3504,10 +3504,10 @@ body.home {
   -webkit-transition: opacity 150ms ease-in-out;
   transition: opacity 150ms ease-in-out;
   &.pathgather-image {
-    background-image: image-url('pathgather_banner.jpg');
+    background-image: image-url('pathgather_banner2.jpg');
   }
   &.bungalow-image {
-    background-image: image-url('bungalow_banner.jpg');
+    background-image: image-url('bungalow_banner2.jpg');
   }
 }
 
@@ -4021,6 +4021,12 @@ footer {
       width: 100%;
     }
   }
+
+  footer {
+    .button-primary {
+      font-size: 0.9em;
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {
@@ -4035,6 +4041,11 @@ footer {
       float: left;
     }
   }
+}
+
+.project-bullet {
+  list-style-type: disc;
+  margin-left: 25px;
 }
 
 @include media-breakpoint-down(sm) {
@@ -4059,5 +4070,11 @@ footer {
 
   .client-icon {
     height: 23px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1200px)  {
+  .services-top-post-its, .services-bottom-post-its {
+    height: 140%;
   }
 }

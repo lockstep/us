@@ -22,17 +22,17 @@ $(function() {
   if ($('body.work-index').length > 0) {
     var $wo = $(window).scroll(function() {
       if ($('.split-layout-secondary').css('display') !== "none") {
-        if ( $wo.scrollTop() > ($("a#trustbooks").offset().top - 200) ) {
+        if ( $wo.scrollTop() > ($("a#trustbooks").offset().top - 350) ) {
           $(".bg-default").css("opacity", 1);
           $(".pathgather-image").css("opacity", 0);
           $(".bungalow-image").css("opacity", 0);
         }
-        if ( $wo.scrollTop() > ($("a#pathgather").offset().top - 200) ) {
+        if ( $wo.scrollTop() > ($("a#pathgather").offset().top - 350) ) {
           $(".bg-default").css("opacity", 0);
           $(".pathgather-image").css("opacity", 1);
           $(".bungalow-image").css("opacity", 0);
         }
-        if ( $wo.scrollTop() > ($("a#bungalow").offset().top - 200) ) {
+        if ( $wo.scrollTop() > ($("a#bungalow").offset().top - 350) ) {
           $(".bg-default").css("opacity", 0);
           $(".pathgather-image").css("opacity", 0);
           $(".bungalow-image").css("opacity", 1);
