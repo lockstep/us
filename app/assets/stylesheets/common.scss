@@ -3496,7 +3496,7 @@ body.home {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: image-url('trustbook_banner2.jpg');
+  background-image: image-url('trustbook_banner.jpg');
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3515,10 +3515,10 @@ body.home {
   -webkit-transition: opacity 150ms ease-in-out;
   transition: opacity 150ms ease-in-out;
   &.pathgather-image {
-    background-image: image-url('pathgather_banner2.jpg');
+    background-image: image-url('pathgather_banner.jpg');
   }
   &.bungalow-image {
-    background-image: image-url('bungalow_banner2.jpg');
+    background-image: image-url('bungalow_banner.jpg');
   }
 }
 
