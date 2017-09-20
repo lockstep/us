@@ -9,7 +9,7 @@ $(function() {
 
   var $w = $(window).scroll(function() {
     if ( $('body.home').length ) {
-      if ($w.scrollTop() > 100) {
+      if ($w.scrollTop() > 0) {
         $(".application-header").removeClass('home-header');
         $(".application-header").addClass('show-shadow');
       } else {
