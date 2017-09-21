@@ -1249,6 +1249,10 @@ strong {
     border-color: $green;
     color: $blue;
   }
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 }
 
 .nav-on-dark-background .application-nav-link, body.home .application-nav-link {
@@ -1301,9 +1305,16 @@ body.home {
 
 body.home {
   .fixed .application-nav-link {
-    &:active, &:focus, &:hover {
+    &:hover {
       border-color: $green;
       color: $blue;
+    }
+
+    &.disabled {
+      &:hover {
+        opacity: 0.5;
+        color: #3d3e44;
+      }
     }
   }
   .mobile-menu .application-nav-link {
@@ -1326,9 +1337,16 @@ body.home {
 }
 
 .fixed .application-nav-link {
-  &:active, &:focus, &:hover {
+  &:active, &:hover {
     border-color: $green;
     color: $blue;
+  }
+
+  &.disabled {
+    &:hover {
+      opacity: 0.5;
+      color: #3d3e44;
+    }
   }
 }
 
@@ -1347,7 +1365,7 @@ body.home {
 
 @media screen and (min-width: 890px) {
   body {
-    &.hire-us .application-nav-hire-us, &.services-index .application-nav-services,
+    &.services-index .application-nav-services,
     &.work-index .application-nav-work, &.home .application-nav-home {
       border-width: 2px;
       padding-bottom: 4px;
@@ -4025,5 +4043,24 @@ footer {
 @media (max-width: 1280px) and (min-width: 1200px)  {
   .services-top-post-its, .services-bottom-post-its {
     height: 140%;
+  }
+}
+
+.jiggled {
+  animation: jiggle 2.5s infinite ease-in;
+}
+
+@keyframes jiggle {
+  45%, 65% {
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    transform: scale(1.1, 0.9)
+  }
+  55% {
+    transform: scale(0.9, 1.1) translate(0, -5px)
+  }
+  60% {
+    transform: scale(1.0, 1.0) translate(0, -5px)
   }
 }

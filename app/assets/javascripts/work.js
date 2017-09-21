@@ -9,7 +9,7 @@ function scrollForFixedColumn() {
             a = "split-layout-secondary--fixed";
         r.css("max-height", i), $(window).on("scroll", function() {
             var e = $(window).scrollTop();
-            total = n + e - t - 170 + 169
+            total = n + e - t - 1;
             total >= 0 ? r.removeClass(a) : r.addClass(a)
         })
       }

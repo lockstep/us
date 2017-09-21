@@ -1,7 +1,5 @@
 $(function() {
   $('a[href^="#"]').on('click', function () {
-    $('.nav-link').removeClass('active');
-    $(this).addClass('active');
     var element = $($(this).attr('href'));
     $('html,body').animate({ scrollTop: element.offset().top },'normal', 'swing');
     return false;
@@ -16,6 +14,14 @@ $(function() {
         $(".application-header").addClass('home-header');
         $(".application-header").removeClass('show-shadow');
       }
+    }
+
+    if ($(window).scrollTop() + window.innerHeight == $(document).height()) {
+      $('#contact-us .button-primary').addClass('jiggled');
+      $('.application-header .application-nav-hire-us').addClass('disabled');
+    } else {
+      $('#contact-us .button-primary').removeClass('jiggled');
+      $('.application-header .application-nav-hire-us').removeClass('disabled');
     }
   });
 
