@@ -6598,7 +6598,12 @@ window.App = {},
         var e;
         new(e = function() {
             function e() {
-                this.applicationHeader = $("[data-application-header]"), this.mobileMenuIcon = $("[data-application-nav-mobile-icon]"), this.navLinks = $("[data-application-nav-link]"), this.lastScrollTop = 0, this._fixHeaderIfPastA(), this._bindEvents()
+                this.applicationHeader = $("[data-application-header]"),
+                this.mobileMenuIcon = $("[data-application-nav-mobile-icon]"),
+                this.navLinks = $("[data-application-nav-link]"),
+                this.lastScrollTop = 0,
+                this._fixHeaderIfPastA(),
+                this._bindEvents()
             }
             return e.prototype._bindEvents = function() {
                 return $(window).scroll(function(e) {
@@ -6640,34 +6645,3 @@ window.App = {},
             $(this).toggleClass("active")
         })
     });
-
-var $body = $("body");
-$.fn.random = function() {
-  return this.eq(Math.floor(Math.random() * this.length))
-};
-$.fn.shuffle = function() {
-    var e = function(e) {
-            return Math.floor(Math.random() * e)
-        },
-        t = this.get(),
-        n = $.map(t, function() {
-            var n = e(t.length),
-                i = $(t[n]).clone(!0)[0];
-            return t.splice(n, 1), i
-        });
-    return this.each(function(e) {
-        $(this).replaceWith($(n[e]))
-    }), $(n)
-}, window.SmoothScroll = function() {
-    $('a[href*="#"]:not([href="#"])').click(function(e) {
-        if (e.preventDefault(), e.stopPropagation(), location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-            var t = $(this.hash);
-            if (t = t.length ? t : $("[name=" + this.hash.slice(1) + "]"), t.length) return $(t).velocity("scroll", {
-                duration: 900,
-                offset: -20,
-                easing: "ease-in-out",
-                mobileHA: !1
-            }), !1
-        }
-    })
-};
