@@ -1451,6 +1451,7 @@ body.home {
       border-color: rgba(61, 62, 68, 0.3);
       color: #3d3e44;
     }
+
     .home-header {
       .application-nav-hire-us-cta, .application-nav-mobile-icon {
         border-color: rgba(255, 255, 255, 0.5);
@@ -1463,12 +1464,23 @@ body.home {
         }
       }
     }
+
     .application-nav-hire-us-cta {
       &:active, &:focus, &:hover {
-        border-color: rgba(255, 255, 255, 0.9);
-        color: rgba(255, 255, 255, 0.8);
+        border-color: rgba(61, 62, 68, 0.3);
+        color: #3d3e44;
       }
     }
+
+    .home-header {
+      .application-nav-hire-us-cta {
+        &:active, &:focus, &:hover {
+          border-color: rgba(255, 255, 255, 0.9);
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+
     .application-nav-mobile-icon {
       &:active, &:focus, &:hover {
         border-color: rgba(61, 62, 68, 0.3);
