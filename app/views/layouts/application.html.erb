@@ -16,6 +16,7 @@
     <%= javascript_include_tag 'application' %>
     <%= render partial: 'layouts/favicon' %>
     <link rel='manifest' href='manifest.json'>
+    <link rel="canonical" href="<%= request.original_url %>">
     <title><%= yield(:page_title) %></title>
   </head>
   <body class='pages pages-show <%= body_class(action_name) %>'>
