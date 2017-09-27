@@ -44,12 +44,6 @@ window.App = {},
             return e._handleMobileIconClick(t)
           }
         }(this))
-      }, e.prototype._showHeaderIfPastB = function() {
-        return this._isPastPointB() ? this._showIfScrollingUp() : this.applicationHeader.removeClass("show")
-      }, e.prototype._isPastPointA = function() {
-        return $(window).scrollTop() > 100
-      }, e.prototype._isPastPointB = function() {
-        return $(window).scrollTop() > 700
       }, e.prototype._showIfScrollingUp = function() {
         var e;
         return e = $(window).scrollTop(), e >= this.lastScrollTop ? this.applicationHeader.removeClass("show").addClass("hide") : this.applicationHeader.removeClass("hide").addClass("show"), this.lastScrollTop = e

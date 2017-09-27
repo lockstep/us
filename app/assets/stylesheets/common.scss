@@ -1067,7 +1067,9 @@ body.home {
 @media screen and (min-width: 890px) {
   body {
     &.services-index .application-nav-services,
-    &.work-index .application-nav-work, &.home .application-nav-home {
+    &.work-index .application-nav-work,
+    &.home .application-nav-home,
+    &.team .application-nav-team,  {
       border-width: 2px;
       padding-bottom: 4px;
     }
@@ -3681,7 +3683,7 @@ footer {
   }
 }
 
-.services-index, .work-index, .hire-us {
+.services-index, .work-index, .hire-us, .team {
   main {
     padding-top: 120px;
   }
@@ -3709,8 +3711,18 @@ footer {
   }
 }
 
+@include media-breakpoint-down(lg) {
+  .application-nav {
+    font-size: 0.8em;
+  }
+}
+
 @include media-breakpoint-down(md) {
-  .services-index, .work-index, .hire-us {
+  .application-nav {
+    font-size: 1.1em;
+  }
+
+  .services-index, .work-index, .hire-us, .team {
     main {
       padding-top: 71px;
     }
@@ -3750,6 +3762,12 @@ footer {
 
   .client-icon {
     height: 23px;
+  }
+
+  footer {
+    .button-primary {
+      font-size: 0.7em;
+    }
   }
 }
 

@@ -20,4 +20,7 @@ class PagesController < ApplicationController
 
   def services
   end
+
+  def team
+  end
 end
