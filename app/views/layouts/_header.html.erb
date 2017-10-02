@@ -1,4 +1,4 @@
-<header class="application-header fixed show <%= 'home-header' if action_name == 'home' %>" data-application-header>
+<header class="application-header fixed show <%= 'home-header' if  ['home', 'team'].include?(action_name)  %>" data-application-header>
   <a class="application-nav-logo" aria-label="Lockstep Home" href="/">
     <!-- Logo for desktop version -->
     <div class="logo-ralph-and-wordmark"></div>

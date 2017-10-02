@@ -968,7 +968,7 @@ strong {
   }
 }
 
-body.home {
+body.home, body.team {
   .application-nav-link {
     &:active, &:focus, &:hover {
       border-color: rgba(255, 255, 255, 0.9);
@@ -3426,43 +3426,6 @@ body.home {
   }
 }
 
-.shadow-filter {
-  -webkit-filter: url("#shadow-filter");
-  filter: url("#shadow-filter");
-}
-
-.blue-fill {
-  fill: #6ea4e2;
-}
-
-.green-fill {
-  fill: #b8e986;
-}
-
-.yellow-fill {
-  fill: #f0ee85;
-}
-
-.red-fill {
-  fill: #e57377;
-}
-
-.white-fill {
-  fill: #fff;
-}
-
-.dot-gray {
-  fill: #d6d6d6;
-}
-
-.note-gray {
-  fill: #dfdfdf;
-}
-
-.line-gray {
-  fill: #eee;
-}
-
 .services-design-storyboard-wrapper {
   text-align: center;
 }
@@ -3683,7 +3646,7 @@ footer {
   }
 }
 
-.services-index, .work-index, .hire-us, .team {
+.services-index, .work-index, .hire-us {
   main {
     padding-top: 120px;
   }
@@ -3722,7 +3685,7 @@ footer {
     font-size: 1.1em;
   }
 
-  .services-index, .work-index, .hire-us, .team {
+  .services-index, .work-index, .hire-us {
     main {
       padding-top: 71px;
     }

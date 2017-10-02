@@ -11,36 +11,3 @@ h1.intro-text {
   top: -15px;
   font-size: 1.7rem;
 }
-
-// NOTE: These are for the interactive type feature I'm working on,
-// please just ignore them/leave them here for now.
-// Prompts
-
-// .choices {
-//   display: none;
-//
-//   span {
-//     color: $brand-primary;
-//     margin-right: 25px;
-//     border-bottom: solid 1px $brand-primary;
-//     transition: all 0.2s ease;
-//
-//     &:hover {
-//       cursor: pointer;
-//       color: $darker-blue;
-//       border-color: $darker-blue;
-//     }
-//   }
-// }
-
-// Typed cursor
-
-// .typed-cursor{
-//   opacity: 1;
-//   -webkit-animation: blink 0.7s infinite;
-// }
-// @-webkit-keyframes blink{
-//   0% { opacity:1; }
-//   50% { opacity:0; }
-//   100% { opacity:1; }
-// }

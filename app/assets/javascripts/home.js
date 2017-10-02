@@ -6,7 +6,7 @@ $(function() {
   });
 
   var $w = $(window).scroll(function() {
-    if ( $('body.home').length ) {
+    if ( $('body.home').length || $('body.team').length ) {
       if ($w.scrollTop() > 0) {
         $(".application-header").removeClass('home-header');
         $(".application-header").addClass('show-shadow');
