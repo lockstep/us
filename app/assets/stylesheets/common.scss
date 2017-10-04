@@ -440,6 +440,12 @@ p {
       border-color: rgba(237, 62, 68, 0.6);
       color: #ed3e44;
     }
+    &.blue-link {
+      &:active, &:focus, &:hover {
+        border-color: $green;
+        color: $blue;
+      }
+    }
   }
 }
 
