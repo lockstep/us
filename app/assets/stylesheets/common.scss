@@ -1915,7 +1915,7 @@ body.home {
 }
 
 .hero-image-wrapper {
-  padding: 1.5rem;
+  padding: 5.5rem;
 }
 
 .hero-project-image {
@@ -3176,7 +3176,7 @@ body.home {
 }
 
 .tech {
-  background-color: $red;
+  background-color: $blue;
   padding: 3rem;
   color: white;
 }
@@ -3644,9 +3644,8 @@ body.home {
   overflow: visible;
   .carousel-paragraph {
     position: absolute;
-    margin-top: 21.5rem;
+    margin-top: 18rem;
     font-size: 1.1em;
-    padding: 4rem;
   }
 }
 
@@ -3657,7 +3656,6 @@ body.home {
 
 .hero {
   .carousel {
-    width: 100%;
     height: 640px;
   }
 }
@@ -3705,6 +3703,18 @@ footer {
       font-size: 0.9em;
     }
   }
+
+  .hero {
+    .carousel {
+      height: 500px;
+    }
+  }
+
+  .carousel-inner {
+    .carousel-paragraph {
+      margin-top: 14rem;
+    }
+  }
 }
 
 @include media-breakpoint-down(lg) {
@@ -3729,6 +3739,23 @@ footer {
       float: left;
     }
   }
+
+  .hero-image-wrapper {
+    padding: 2rem;
+    padding-top: 4.5rem;
+  }
+
+  .carousel-inner {
+    .carousel-paragraph {
+      margin-top: 20rem;
+    }
+  }
+
+  .hero {
+    .carousel {
+      height: 690px;
+    }
+  }
 }
 
 .project-bullet {
@@ -3744,7 +3771,7 @@ footer {
 
   .carousel-inner {
     .carousel-paragraph {
-      margin-top: 18.5rem;
+      margin-top: 15rem;
       font-size: 1.1rem;
       padding: 1rem;
     }
@@ -3752,7 +3779,7 @@ footer {
 
   .hero {
     .carousel {
-      height: 560px;
+      height: 600px;
     }
   }
 
@@ -3763,6 +3790,14 @@ footer {
   footer {
     .button-primary {
       font-size: 0.7em;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .hero {
+    .carousel {
+      height: 500px;
     }
   }
 }
