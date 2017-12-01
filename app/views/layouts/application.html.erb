@@ -17,13 +17,13 @@
     <%= render partial: 'layouts/favicon' %>
     <link rel='manifest' href='manifest.json'>
     <link rel="canonical" href="<%= request.original_url %>">
+    <%= render partial: 'layouts/google_analytics' %>
     <title><%= yield(:page_title) %></title>
   </head>
   <body class='pages pages-show <%= body_class(action_name) %>'>
     <%= render partial: 'layouts/header' %>
     <%= yield %>
     <%= render partial: 'layouts/footer' %>
-    <%= render partial: 'layouts/google_analytics' %>
     <%= javascript_include_tag 'work' %>
   </body>
 </html>
