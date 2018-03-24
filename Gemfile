@@ -88,7 +88,6 @@ group :development, :test do
 
   # Use Pry instead of IRB
   gem 'pry-byebug'
-  gem 'pry-doc'
   gem 'pry-rails'
 end
 
