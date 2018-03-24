@@ -1,26 +1,30 @@
-title: Your awesome title
-email: your-email@example.com
+title: Code Review Nuggets by Lockstep Labs
+email: info@locksteplabs.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
+  line in config/jekyll.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/blog"
 url: "https://www.locksteplabs.com"
+markdown: kramdown
 highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
-paginate: 5
+paginate: 4
+paginate_path: "page/:num"
 
-# Build settings
-markdown: kramdown
+# config accessible under site.theme_settings
+# see https://github.com/Sylhare/Type-on-Strap/blob/master/_config.yml
+# for more options
 theme_settings:
+  title: Code Review Nuggets by Lockstep Labs
   avatar: assets/img/triangle.svg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
   header_text: >
-    <p>Change header text in <code>_config.yml</code> <br> to update this feature.</p>
+    <p>Change header text in <code>config/jekyll.yml</code> <br> to update this feature.</p>
   header_text_feature_image: assets/img/pexels/triangular.jpeg
   footer_text: >
     Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
