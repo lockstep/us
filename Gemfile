@@ -64,6 +64,9 @@ gem 'secure_headers', require: false
 
 gem 'font-awesome-rails'
 
+# Blog
+gem 'jekyll', '3.7.3'
+
 group :production do
   # Remove this if the app is not hosted on Heroku
   gem 'heroku-deflater'
