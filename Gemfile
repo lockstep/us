@@ -66,6 +66,8 @@ gem 'font-awesome-rails'
 
 # Blog
 gem 'jekyll', '3.7.3'
+gem "jekyll-theme-primer"
+gem "minima", "~> 2.0"
 
 group :production do
   # Remove this if the app is not hosted on Heroku

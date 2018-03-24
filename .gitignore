@@ -24,3 +24,5 @@
 
 # Figaro
 config/application.yml
+.sass-cache
+public/blog
