@@ -22,7 +22,6 @@ theme_settings:
   title: Code Review Nuggets by Lockstep Labs
   avatar: assets/img/triangle.svg
   favicon: assets/favicon.ico
-  gravatar: # Email MD5 hash
   header_text: >
     <p>Change header text in <code>config/jekyll.yml</code> <br> to update this feature.</p>
   header_text_feature_image: assets/img/pexels/triangular.jpeg
@@ -31,3 +30,10 @@ theme_settings:
   tags: true
   github: lockstep
   rss: true
+
+authors:
+  jan:
+    name: Jan Klimo
+    profile_image: assets/img/authors/jan.png
+    twitter: janklimo
+    github: janklimo

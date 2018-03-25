@@ -114,3 +114,13 @@ header {
         vertical-align: middle;
     }
 }
+
+// author section
+article {
+  .profile-image-container img {
+    width: 70px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 20px 0 2px;
+  }
+}
