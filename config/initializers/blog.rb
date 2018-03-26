@@ -1,8 +1,8 @@
 Rails.application.config.after_initialize do
   unless Rails.env.test?
-    Rails.logger = Logger.new(STDOUT)
-
     begin
+      logger = ActiveSupport::Logger.new(STDOUT)
+      Rails.logger = ActiveSupport::TaggedLogging.new(logger)
       dest = Rails.root.join('public/blog')
 
       # generate the site
@@ -16,7 +16,7 @@ Rails.application.config.after_initialize do
       ).process
 
       # formatted log output
-      Rails.logger.info "\e[0;32;49mJekyll site built!\e[0m]]"
+      Rails.logger.info "\e[0;32;49mJekyll site built!\e[0m 🎉 🚀"
     rescue => e
       Rails.logger.error "\e[0;31;49mJekyll site build failed.\e[0m\n\e[0;33;49mError:\e[0m #{e}"
     end
