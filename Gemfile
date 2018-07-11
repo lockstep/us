@@ -33,7 +33,7 @@ gem 'newrelic_rpm'
 gem 'pundit'
 
 # Authentication
-gem 'devise', '~> 4.3.0'
+gem 'devise', '~> 4.4.0'
 
 # API serialization
 gem 'active_model_serializers', '~> 0.10.0'
