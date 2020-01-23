@@ -267,7 +267,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    secure_headers (3.6.5)
+    secure_headers (3.9.0)
       useragent
     selenium-webdriver (3.4.3)
       childprocess (~> 0.5)
@@ -303,7 +303,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.3.0)
     uniform_notifier (1.10.0)
-    useragent (0.16.8)
+    useragent (0.16.10)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.5.1)
